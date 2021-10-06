@@ -3,8 +3,42 @@
 
 }
 
+.invisible {
+    visibility: none;
+    opacity: 0;
+    position: relative;
+    z-index: -99;
+
+
+}
+
 .fadeBlack {
     animation: fadeBlack .2s forwards;
 
+
+}
+
+body {
+    scroll-behavior: smooth;
+
+
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+
+
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: $dark-color;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
 
 }
