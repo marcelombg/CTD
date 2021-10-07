@@ -3,7 +3,7 @@ body {
     background: url('../../assets/body-gradient.png');
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    
+
 }
 
 header.fixed  {
@@ -158,8 +158,6 @@ header.fixed  {
 
 }
 
-
-
 section.cover {
     height: 100vh;
     background: url('../../assets/home/section-cover.jpg');
@@ -272,10 +270,10 @@ section.cover {
 main.carousel {
 
     padding-block: $gutter;
-
+    position: relative;
     section {
 
-        h2 {
+        h2.title-carousel {
             color: $light-color;
             font-size: 24px;
             font-weight: 500;
@@ -289,6 +287,7 @@ main.carousel {
             max-width: 100%;
             // overflow-x: scroll;
             gap: $gutter / 2;
+            position: relative;
 
             li {
                 cursor: pointer;
@@ -368,8 +367,8 @@ main.carousel {
                 }
 
                 &:hover {
-                    transform: scale(1.3);
-                    z-index: 99;
+                    animation: scaleDelay .4s forwards;
+
                 }
 
                 &:hover .description {
@@ -388,6 +387,333 @@ main.carousel {
 
     }
 
+    &.active::before {
+        content: '';
+        display: block;
+        background-color: $transparent;
+        backdrop-filter: blur(3px);
+        position: absolute;
+        z-index: 100;
+        width: 200%;
+        left: -50%;
+        height: 100%;
+
+    }
+
+}
+
+section.movies-modal {
+    display: grid;
+    position: fixed;
+    top: 10%;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: $gutter;
+    color: $light-color;
+    background-color: darken($dark-color, 3%);
+    padding: $gutter;
+    animation: appearField .8s;
+ 
+    
+
+    header {
+        display: flex;
+        
+        align-items: flex-start;
+
+        img {
+            max-width: 200px;
+            cursor: pointer;
+            
+
+        }
+
+        main.modal-description {
+            display: flex;
+            flex-direction: column;
+            padding-left: $gutter;
+            justify-content: space-between;
+            height: 100%;
+
+            .top {
+                display: grid;
+                gap: $gutter;
+            }
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    font-size: 28px;
+                    font-weight: 500;
+
+                }
+
+                i {
+                    font-size: 28px;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+
+            article.synopsis {
+                max-width: 550px;
+                line-height: 1.2;
+                font-size: 14px;
+
+            }
+
+            footer.rating {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .status {
+                    p {
+                        display: inline;
+                        font-weight: 500;
+                        font-size: 16px;
+
+                        &:first-child {
+                            margin-right: $gutter / 2;
+                            color: $primary-color;
+
+                        }
+                    }
+                    
+                }
+
+                .modal-actions {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                            
+                        font-size: 24px;
+                        
+                        
+                    }
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: lighten($light-color, 100%);
+
+                    }
+
+                    a.play {
+                        background: $secondary-gradient;
+                        border-radius: 50%;
+                        border: none;
+                        margin-right: $gutter / 2;
+                        padding: 12px;
+                        
+                        &:hover {
+                            background: $reverse-secondary-gradient;
+    
+                        }
+    
+                        
+                    }
+    
+                    a.my-list {
+                        background-color: $reverse-transparent;
+                        
+                        border-radius: 40px;
+                        padding: 0 38px;
+                        height: 35px;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        font-weight: 500;
+    
+                        &:hover {
+                            background: $primary-color;
+                        }
+    
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    main.trailers {
+
+        max-height: 300px;
+        overflow-y: scroll;
+        
+        h2.title {
+            font-size: 28px;
+            margin-bottom: $gutter;
+            
+
+        }
+    
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: $gutter;
+
+            section.item {
+                display: flex;
+                gap: $gutter;
+
+                .item-video {
+                    cursor: pointer;
+                    transition: .2s;
+                    
+                }
+                
+                .item-description {
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-bottom: $gutter / 2;
+
+                    }
+
+                    p {
+                        max-width: 550px;
+                        line-height: 1.2;
+                        font-size: 14px;
+                                
+                    }
+                }
+    
+            }
+
+        }
+        
+
+    }   
+
+
+}
+
+
+section.search-items {
+
+    padding-block: $gutter;
+
+        h2.title-carousel {
+            color: $light-color;
+            font-size: 24px;
+            font-weight: 500;
+            padding-block: $gutter * 4 $gutter * 2;
+
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            gap: $gutter / 2;
+            position: relative;
+
+            li {
+                cursor: pointer;
+                position: relative;
+
+                .description {
+                    display: none;
+                    background-color: $dark-color;
+                    color: $light-color;
+                    padding: $gutter / 1.5 $gutter / 2 $gutter $gutter / 2;
+                    position: absolute;
+                    margin-top: -5px;
+                    z-index: 99;
+                    font-size: 12px;
+                    gap: $gutter / 2;
+                    border-radius: 0 0 10px 30px;
+
+                    .actions {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 14px;
+
+                        i {
+                            padding: 10px;
+                            background: $reverse-transparent;
+                    
+                            border-radius: 50%;
+                            font-size: 16px;
+                            transition: .3s;
+
+                            &:first-child {
+                                background: $secondary-gradient;
+
+                                &:hover {
+                                    
+                                    background: $reverse-secondary-gradient;
+                                }
+                            }
+                            
+                            &:hover {
+                                transform: scale(1.1);
+                                background: $primary-color;
+                            }
+
+                        }
+                        .left {
+                            display: flex;
+                            gap: $gutter / 2;
+                        }
+
+                    }
+                    
+                    .status {
+                        display: flex;
+                        justify-content: space-between;
+
+                        p {
+                            font-weight: 600;
+
+                            &:first-child {
+                                color: $secondary-color;
+                            }   
+                        }
+                    }
+
+                    .synopsis {
+                        line-height: 1.3;
+                    }
+                }
+
+                img {
+                    max-width: 200px;
+                    max-height: 300px;
+                    
+                }
+
+                &:hover {
+                    animation: scaleDelay .4s forwards;
+
+                }
+
+                &:hover .description {
+                   
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 99;
+
+                }
+
+
+            }
+         
+
+        }
+
+
 }
 
 header.aside {
@@ -396,11 +722,19 @@ header.aside {
     z-index: 200;
     background-color: darken($dark-color, 100%);
     
+
+
     .genres {
         
         i {
             font-size: 32px;
         }
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
     }
 
 }
