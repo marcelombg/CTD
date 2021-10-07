@@ -1,0 +1,77 @@
+body {
+    min-height: 100vh;
+    background: url('../../assets/body-gradient.png');
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+header.index-header {
+    width: 100%;
+    transition: .1s ease-out;
+    background-color: darken($dark-color, 100%);
+    
+    .icon-index {
+
+        i {
+            font-size: 20px;
+            color: darken($light-color, 15%);
+            cursor: pointer;
+
+            &:hover {
+                color: lighten($light-color, 15%);
+            }
+        }
+    }
+
+    .index-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    img.logo {
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .index-settings {
+        display: flex;
+        align-items: center;
+        gap: $gutter;
+    
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            color: $light-color;
+            cursor: pointer;
+
+            &:hover {
+                color: lighten($light-color, 15%);
+            }
+        }
+    }
+}
+
+div.index-item-content {
+    height: 100vh;
+    background: url('/assets/initial-cover.jpg');
+    background-size: cover;
+    width: 100%;
+
+    .index-info {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    .index-title .index-callout .index-description {
+        font-size: 14px;
+        font-weight: 500;
+        color: $light-color;
+        cursor: pointer;
+    }
+}
