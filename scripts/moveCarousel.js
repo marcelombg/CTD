@@ -1,7 +1,7 @@
 // ** DOM ELEMENTS
 
-const buttonRight = document.querySelector('.btn--right');
-const buttonLeft = document.querySelector('.btn--left');
+const buttonRight = document.querySelectorAll('.btn--right');
+const buttonLeft = document.querySelectorAll('.btn--left');
 const carousel = document.querySelector('.items-carousel');
 const listWidth = carousel.getBoundingClientRect().width;
 
@@ -11,56 +11,68 @@ let position = 0;
 
 // FUNCTIONS
 
-const showArrow = () => {
+const showArrow = (arrow) => {
 
     // ** RIGHT ARROW
     if(position <= listWidth * 2) {
 
-        buttonRight.style.visibility = 'visible';
+        arrow.style.visibility = 'visible';
     
     } else if(position >= listWidth * 2) {
     
-        buttonRight.style.visibility = 'hidden';
+        arrow.style.visibility = 'hidden';
     
     }
     
     // ** LEFT ARROW
     if(position <= 0) {
 
-        buttonLeft.style.visibility = 'hidden';
+        arrow.style.visibility = 'hidden';
 
     } else if(position > 0) {
 
-        buttonLeft.style.visibility = 'visible';
+        arrow.style.visibility = 'visible';
 
     }
 
 };
 
-showArrow();
+// showArrow();
 
 // ** EVENTS
 
-buttonRight.addEventListener('click', () => {
-    
-    position += 350 * 3;
-    
-    carousel.style.right = `${position}px`;
+buttonRight.forEach(e => {
 
-    showArrow();
+    e.addEventListener('click', () => {
+    
+        position += 350 * 3;
+        
+        let carousel = e.previousElementSibling;
 
-    return position;
+        carousel.style.right = `${position}px`;
+    
+        showArrow(e);
+        
+        return position;
+    
+    });
 
 });
 
-buttonLeft.addEventListener('click', () => {
+buttonLeft.forEach(e => {
 
-    position -= 350 * 3;
+    e.addEventListener('click', () => {
 
-    carousel.style.right = `${position}px`;
+        position -= 350 * 3;
+
+        let carousel = e.nextElementSibling;
     
-    showArrow();
-
-    return position;
+        carousel.style.right = `${position}px`;
+        
+        showArrow(e);
+    
+        return position;
+    
+    });
 
 });
