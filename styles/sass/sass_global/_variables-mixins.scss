@@ -3,7 +3,10 @@ $secondary-color: #7E24EB;
 $dark-color: #0F0F0F;
 $light-color: #e3e3e4;
 $transparent: rgba(0, 0, 0, .8);
-
+$reverse-transparent: rgba(255, 255, 255, 0.2);
+$primary-gradient: linear-gradient(90deg, rgba(102,61,232,1) 0%, rgba(164,14,228,1) 48%, rgba(92,10,118,1) 86%);
+$secondary-gradient: linear-gradient(90deg, rgba(78,26,202,1) 0%, rgba(116,81,250,1) 100%);
+$reverse-secondary-gradient: linear-gradient(90deg, rgba(116,81,250,1) 0%, rgba(78,26,202,1) 100%);
 $gutter: 24px;
 $default-radius: 5px;
 

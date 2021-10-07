@@ -1,0 +1,89 @@
+body {
+  min-height: 100vh;
+  background-size: cover;
+}
+
+main .title-here {
+  text-align: center;
+  color: white;
+  position: relative;
+  font-size: 24px;
+  top: 70px;
+}
+
+.user-select-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.user-select-profile li {
+  position: relative;
+  top: 120px;
+  padding: 30px;
+  transition: 0.2s;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: scale(1.3);
+  }
+
+  img {
+    width: 130px;
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+    border: 4px solid $secondary-color;
+    border-radius: 50%;
+  }
+
+  h2 {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+.button-add {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 140px;
+
+  a {
+    text-decoration: none;
+    padding: 0px 27px;
+  }
+
+  button {
+    width: 181px;
+    height: 32px;
+    font-size: 13px;
+    border-radius: 40px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.342);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.521);
+    }
+  }
+}
+
+.manage-profiles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 200px;
+  a {
+    text-decoration: none;
+    color: #9e86ff;
+    font-size: 13px;
+
+    &:hover {
+      color: #9e86ff94;
+    }
+  }
+}

@@ -39,17 +39,42 @@ const closeMenu = headerBlack.querySelector('i')
 const showingMenu = () => {
 
     openMenu.addEventListener('click', () => {
-        headerBlack.classList.remove('hidden')
-        asideMenu.classList.remove('hidden')
-       
+        headerBlack.classList.remove('invisible');
+        asideMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+
     })
 
     closeMenu.addEventListener('click', () => {
-        headerBlack.classList.add('hidden')
+        headerBlack.classList.add('invisible')
         asideMenu.classList.add('hidden')
+        document.body.style.overflow = 'visible';
 
     })
+
+    document.addEventListener ('keydown', (event) => {
+        if (event.key === "Escape") { 
+            headerBlack.classList.add('invisible')
+            asideMenu.classList.add('hidden')
+            document.body.style.overflow = 'visible';
+        }
+    });
 
 }
 
 showingMenu()
+
+// CLOSE MENU AT CLICK AND PREVENT SCROLL
+
+const navItems = document.querySelectorAll('aside.menu-genres nav a')
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        headerBlack.classList.add('hidden')
+        asideMenu.classList.add('hidden')
+        document.body.style.overflow = 'visible';
+    })
+})
+
+  
