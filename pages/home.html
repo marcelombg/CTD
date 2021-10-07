@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/style.css">
     <script defer src="../scripts/index.js"></script>
+    <script defer src="../scripts/getMovies.js"></script>
+    <script defer src="../scripts/moveCarousel.js"></script>
 </head>
 
 <body>
@@ -127,222 +129,25 @@
     <main class="carousel container">
 
         <section id="trending">
+
             <h2>Trending Now</h2>
-            <ul class="items-carousel">
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-            </ul>
+
+            <div class="item-carousel-wrapper">
+
+                <div class="btn btn--left">◀</div>
+                
+                <ul class="row items-carousel">
+                    
+                    
+                </ul>
+                
+                <div class="btn btn--right">▶</div>
+                
+            </div>
+            
 
         </section>
-
-        <section id="trending">
-            <h2>Trending Now</h2>
-            <ul class="items-carousel">
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-            </ul>
-
-        </section>
-
-        <section id="trending">
-            <h2>Trending Now</h2>
-            <ul class="items-carousel">
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-            </ul>
-
-        </section>
-
-        <section id="trending">
-            <h2>Trending Now</h2>
-            <ul class="items-carousel">
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-            </ul>
-
-        </section>
-
-        <section id="trending">
-            <h2>Trending Now</h2>
-            <ul class="items-carousel">
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                </li>
-            </ul>
-
-        </section>
-
-        
-
+      
     </main>
 
 </body>

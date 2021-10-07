@@ -57,7 +57,7 @@ const showMovies = movies => {
 
         movieElement.innerHTML = `
         
-            <li class="col-1 movie">
+            <li class="col-1">
 
                 <img src="${IMG_PATH + poster_path}" alt="${title}"/>
             

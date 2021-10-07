@@ -14,11 +14,11 @@ let position = 0;
 const showArrow = () => {
 
     // ** RIGHT ARROW
-    if(position <= listWidth * 3) {
+    if(position <= listWidth * 2) {
 
         buttonRight.style.visibility = 'visible';
     
-    } else if(position >= listWidth * 3) {
+    } else if(position >= listWidth * 2) {
     
         buttonRight.style.visibility = 'hidden';
     
