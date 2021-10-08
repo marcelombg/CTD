@@ -7,6 +7,7 @@ window.addEventListener('scroll', () => showButton())
 const searchIcon = document.querySelector('.search')
 const searchInput = document.querySelector('.search.input')
 const sectionCover = document.querySelector('section.cover')
+const sectionSearch = document.querySelector('section.search-items')
 
 const showingInput = () => {
 
@@ -15,6 +16,8 @@ const showingInput = () => {
         searchInput.classList.add('show-input')
         document.querySelector('header.fixed').classList.add('fadeBlack')
         sectionCover.classList.add('hidden')
+        mainCarousel.classList.add('hidden')
+        sectionSearch.classList.remove('hidden')
     })
 
     searchInput.querySelector('i').addEventListener('click', () => {
@@ -22,6 +25,8 @@ const showingInput = () => {
         searchInput.classList.remove('show-input')
         document.querySelector('header.fixed').classList.remove('fadeBlack')
         sectionCover.classList.remove('hidden')
+        mainCarousel.classList.remove('hidden')
+        sectionSearch.classList.add('hidden')
     })
 
 }
@@ -58,6 +63,9 @@ const showingMenu = () => {
             headerBlack.classList.add('invisible')
             asideMenu.classList.add('hidden')
             document.body.style.overflow = 'visible';
+            modal.classList.add('hidden'); 
+            mainCarousel.classList.remove('active')
+
         }
     });
 
@@ -77,4 +85,27 @@ navItems.forEach(item => {
     })
 })
 
-  
+// MODAL LARGE SHOW AT CLICK
+
+const mainCarousel = document.querySelector('main.carousel')
+const carouselItemsDescription = document.querySelectorAll('main.carousel section ul li')
+const modal = document.querySelector('section.movies-modal')
+
+carouselItemsDescription.forEach(item => {
+    item.addEventListener('click', () => {
+        modal.classList.remove('hidden')
+        mainCarousel.classList.add('active')
+        document.body.style.overflow = 'hidden';
+        
+    })
+
+})
+
+// Close Modal
+modal.querySelector('.ri-close-line').addEventListener('click', () => {
+    modal.classList.add('hidden'); 
+    mainCarousel.classList.remove('active')
+    document.body.style.overflow = 'visible';
+
+})
+
