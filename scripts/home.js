@@ -88,7 +88,7 @@ navItems.forEach(item => {
 // MODAL LARGE SHOW AT CLICK
 
 const mainCarousel = document.querySelector('main.carousel')
-const carouselItemsDescription = document.querySelectorAll('main.carousel section ul li .description')
+const carouselItemsDescription = document.querySelectorAll('main.carousel section ul li')
 const modal = document.querySelector('section.movies-modal')
 
 carouselItemsDescription.forEach(item => {
