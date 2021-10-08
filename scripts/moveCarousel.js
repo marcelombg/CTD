@@ -44,16 +44,20 @@ const showArrow = (arrow) => {
 buttonRight.forEach(e => {
 
     e.addEventListener('click', () => {
-    
-        position += 350 * 3;
-        
+            
         let carousel = e.previousElementSibling;
 
-        carousel.style.right = `${position}px`;
+        if(position <= listWidth * 2) {
+            
+            position += listWidth;
+
+            carousel.style.right = `${position}px`;
+
+        }
     
-        showArrow(e);
+        // showArrow(e);
         
-        return position;
+        // return position;
     
     });
 
@@ -63,15 +67,19 @@ buttonLeft.forEach(e => {
 
     e.addEventListener('click', () => {
 
-        position -= 350 * 3;
-
         let carousel = e.nextElementSibling;
     
-        carousel.style.right = `${position}px`;
+        if(position >= 1000) {
+
+            position -= listWidth;
+
+            carousel.style.right = `${position}px`;
+
+        }
         
-        showArrow(e);
+        // showArrow(e);
     
-        return position;
+        // return position;
     
     });
 

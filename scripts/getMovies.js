@@ -30,11 +30,11 @@ const genresOption = [
 
 // ** DOM
 
-const itemsCarousel = document.querySelector(".items-carousel");
-console.log(itemsCarousel);
+const trendingCarousel = document.querySelector(".carousel-trending");
+const actionCarousel = document.querySelector(".carousel-action");
+const adventureCarousel = document.querySelector(".carousel-adventure");
 const itemModal = document.querySelector(".movies-modal");
 const itemModalContent = document.querySelector(".movies-modal-header");
-console.log(itemModal);
 
 // ** FUNCTIONS
 
@@ -45,11 +45,24 @@ const getMovies = async (url) => {
   showMovies(data.results);
 };
 
+const getActionMovies = async (url) => {
+  const res = await fetch(url);
+  const data = await res.json();
+
+  showActionMovies(data.results);
+};
+
+const getAdventureMovies = async (url) => {
+  const res = await fetch(url);
+  const data = await res.json();
+
+  showAdventureMovies(data.results);
+};
+
 const showMovies = (movies) => {
-  itemsCarousel.innerHTML = "";
+  trendingCarousel.innerHTML = "";
 
   movies.forEach((movie) => {
-      console.log(movie)
     const { id, title, poster_path, overview, vote_average, release_date } =
       movie;
 
@@ -59,10 +72,7 @@ const showMovies = (movies) => {
       // let id = id
 
       fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US
-            `)
-        .then((res) => res.json())
-        .then((videoData) => {
-          console.log(videoData);
+            `).then((res) => res.json()).then((videoData) => {
 
           if (videoData) {
 
@@ -75,9 +85,9 @@ const showMovies = (movies) => {
                 if (site == "YouTube") {
                   embed.push(`
         
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                
-                                `);
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    `);
                 }
               });
 
@@ -166,12 +176,308 @@ const showMovies = (movies) => {
       itemModal.classList.add(id);
     });
 
-    itemsCarousel.appendChild(movieElement);
+    trendingCarousel.appendChild(movieElement);
+    // for(i = 0; i < trendingCarousel.length - 1; i++) {
+
+    //     trendingCarousel[i].appendChild(movieElement)
+
+    // }
+
+    // trendingCarousel.forEach(carousel => {
+
+    //     carousel.appendChild(movieElement);
+
+    // })
 
     });
 };
 
-getMovies(TRENDING_URL);
+const showActionMovies = (movies) => {
+  trendingCarousel.innerHTML = "";
 
-const movieIttem = document.querySelectorAll(".movie");
-console.log(movieIttem);
+  movies.forEach((movie) => {
+    const { id, title, poster_path, overview, vote_average, release_date } =
+      movie;
+
+    const modalTrailers = document.querySelector("main.trailers");
+
+    function getTrailer(id) {
+      // let id = id
+
+      fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US
+            `).then((res) => res.json()).then((videoData) => {
+
+          if (videoData) {
+
+            if (videoData.results.length > 0) {
+              let embed = [];
+
+              videoData.results.forEach((video) => {
+                let { key, name, site } = video;
+
+                if (site == "YouTube") {
+                  embed.push(`
+        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    `);
+                }
+              });
+
+              modalTrailers.innerHTML = embed.join("");
+            } else {
+              modalTrailers.innerHTML = `<h1>No content found</h1>`;
+            }
+          }
+        });
+    }
+
+    const movieElement = document.createElement("li");
+    movieElement.classList.add("movie");
+
+    movieElement.innerHTML = `
+
+                <img src="${IMG_PATH + poster_path}" alt="${title}"/>
+
+                <div class="description">
+
+                    <div class="actions">
+
+                        <div class="left">
+
+                            <i class="ri-play-fill"></i>
+                            <i class="ri-add-line"></i>
+
+                        </div>
+
+                        <i class="ri-arrow-down-s-line"></i>
+
+                    </div>
+
+                    <div class="status">
+
+                        <p>${vote_average}</p>
+                        <p>${release_date}</p>
+
+                    </div>
+
+                    <div class="synopsis">
+
+                        <p>${overview}</p>
+
+                    </div>
+
+                </div>  
+
+        `;
+
+    movieElement.addEventListener("click", () => {
+
+        getTrailer(id);
+        itemModalContent.innerHTML = `
+
+                    <img src="${IMG_PATH + poster_path}" alt="${title}"/>
+                    <main class="modal-description">
+                        <div class="top">
+                            <div class="Title">
+                                <h2>${title}</h2>
+                                <i class="ri-close-line"></i>
+                            </div>
+                            <article class="synopsis">
+                                <p>${overview}</p>
+                            </article>
+                        </div>
+                        <footer class="rating">
+                            <div class="status">
+                                <p>${vote_average}</p>
+                                <p>${release_date}</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="#" class="play">
+                                    <i class="ri-play-fill"></i>
+                                </a>
+                                <a href="#" class="my-list">
+                                    <i class="ri-add-line"></i>
+                                </a>
+                            </div>
+                        </footer>
+                    </main>
+
+            `;
+
+      itemModal.classList.remove("hidden");
+      itemModal.classList.add(id);
+    });
+
+    actionCarousel.appendChild(movieElement);
+    // for(i = 0; i < trendingCarousel.length - 1; i++) {
+
+    //     trendingCarousel[i].appendChild(movieElement)
+
+    // }
+
+    // trendingCarousel.forEach(carousel => {
+
+    //     carousel.appendChild(movieElement);
+
+    // })
+
+    });
+};
+
+const showAdventureMovies = (movies) => {
+  trendingCarousel.innerHTML = "";
+
+  movies.forEach((movie) => {
+    const { id, title, poster_path, overview, vote_average, release_date } =
+      movie;
+
+    const modalTrailers = document.querySelector("main.trailers");
+
+    function getTrailer(id) {
+      // let id = id
+
+      fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US
+            `).then((res) => res.json()).then((videoData) => {
+
+          if (videoData) {
+
+            if (videoData.results.length > 0) {
+              let embed = [];
+
+              videoData.results.forEach((video) => {
+                let { key, name, site } = video;
+
+                if (site == "YouTube") {
+                  embed.push(`
+        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    `);
+                }
+              });
+
+              modalTrailers.innerHTML = embed.join("");
+            } else {
+              modalTrailers.innerHTML = `<h1>No content found</h1>`;
+            }
+          }
+        });
+    }
+
+    const movieElement = document.createElement("li");
+    movieElement.classList.add("movie");
+
+    movieElement.innerHTML = `
+
+                <img src="${IMG_PATH + poster_path}" alt="${title}"/>
+
+                <div class="description">
+
+                    <div class="actions">
+
+                        <div class="left">
+
+                            <i class="ri-play-fill"></i>
+                            <i class="ri-add-line"></i>
+
+                        </div>
+
+                        <i class="ri-arrow-down-s-line"></i>
+
+                    </div>
+
+                    <div class="status">
+
+                        <p>${vote_average}</p>
+                        <p>${release_date}</p>
+
+                    </div>
+
+                    <div class="synopsis">
+
+                        <p>${overview}</p>
+
+                    </div>
+
+                </div>  
+
+        `;
+
+    movieElement.addEventListener("click", () => {
+
+        getTrailer(id);
+        itemModalContent.innerHTML = `
+
+                    <img src="${IMG_PATH + poster_path}" alt="${title}"/>
+                    <main class="modal-description">
+                        <div class="top">
+                            <div class="Title">
+                                <h2>${title}</h2>
+                                <i class="ri-close-line"></i>
+                            </div>
+                            <article class="synopsis">
+                                <p>${overview}</p>
+                            </article>
+                        </div>
+                        <footer class="rating">
+                            <div class="status">
+                                <p>${vote_average}</p>
+                                <p>${release_date}</p>
+                            </div>
+                            <div class="modal-actions">
+                                <a href="#" class="play">
+                                    <i class="ri-play-fill"></i>
+                                </a>
+                                <a href="#" class="my-list">
+                                    <i class="ri-add-line"></i>
+                                </a>
+                            </div>
+                        </footer>
+                    </main>
+
+            `;
+
+      itemModal.classList.remove("hidden");
+      itemModal.classList.add(id);
+    });
+
+    adventureCarousel.appendChild(movieElement);
+    // for(i = 0; i < trendingCarousel.length - 1; i++) {
+
+    //     trendingCarousel[i].appendChild(movieElement)
+
+    // }
+
+    // trendingCarousel.forEach(carousel => {
+
+    //     carousel.appendChild(movieElement);
+
+    // })
+
+    });
+};
+
+
+
+// const moviesLists = document.querySelectorAll('.movies-list');
+// console.log(moviesLists)
+// moviesLists.forEach(list => {
+
+//     if(list.classList.contains('trending')) {
+
+//         getMovies(TRENDING_URL);
+
+//     }
+    
+//     if(list.classList.contains('action')) {
+
+//          getMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_genres=${genresOption[0].id}&api_key=${API_KEY}&page=1`)
+
+//     }
+
+// })
+
+getMovies(TRENDING_URL);
+getActionMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_genres=${genresOption[0].id}&api_key=${API_KEY}&page=1`);
+getAdventureMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_genres=${genresOption[1].id}&api_key=${API_KEY}&page=1`);
