@@ -43,10 +43,56 @@ header.fixed  {
 
 }
 
+section {
+    padding: 80px;
+    
+}
+
+.form {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    flex-direction: column;
+    /* width: 70%; */
+    height: 70%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e3e3e4;
+    cursor: pointer;
+
+    &:hover {
+        color: lighten($light-color, 15%);
+    }
+    .sign {
+        font-weight: 600;
+        color: #e3e3e4;
+        font-size: 28px;
+        line-height: 1.3;
+        }
+    }
+
+    .btn {
+    background: $secondary-gradient;
+    border-radius: 45px;
+    padding: 8px;
+    border: none;
+    margin-right: $gutter / 2;
+
+    &:hover {
+        background: $reverse-secondary-gradient;
+    }
+
+    i {
+        padding: 12px 8px; 
+        font-size: 16px;
+        color: $light-color;
+    }
+
+}
 
 section.login-cover {
     height: 60vh;
-    // background: url('../../assets/home/section-cover.jpg');
     background-size: cover;
 
     &::before {
@@ -64,125 +110,4 @@ section.login-cover {
         z-index: 100;
     }
     
-}
-
-main.carousel {
-
-    padding-block: $gutter;
-
-    section {
-
-        h2 {
-            color: $light-color;
-            font-size: 24px;
-            font-weight: 500;
-            padding-block: $gutter * 3 $gutter;
-
-        }
-
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 100%;
-            // overflow-x: scroll;
-            gap: $gutter / 2;
-
-            li {
-                cursor: pointer;
-                transition: .2s;
-                position: relative;
-
-                .description {
-                    display: none;
-                    background-color: $dark-color;
-                    color: $light-color;
-                    padding: $gutter / 1.5 $gutter / 2 $gutter $gutter / 2;
-                    position: absolute;
-                    margin-top: -5px;
-                    z-index: 99;
-                    font-size: 12px;
-                    gap: $gutter / 2;
-                    border-radius: 0 0 10px 30px;
-
-                    .actions {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 14px;
-
-                        i {
-                            padding: 10px;
-                            background: $reverse-transparent;
-                    
-                            border-radius: 50%;
-                            font-size: 16px;
-                            transition: .3s;
-
-                            &:first-child {
-                                background: $secondary-gradient;
-
-                                &:hover {
-                                    
-                                    background: $reverse-secondary-gradient;
-                                }
-                            }
-                            
-                            &:hover {
-                                transform: scale(1.1);
-                                background: $primary-color;
-                            }
-
-                        }
-                        .left {
-                            display: flex;
-                            gap: $gutter / 2;
-                        }
-
-                    }
-                    
-                    .status {
-                        display: flex;
-                        justify-content: space-between;
-
-                        p {
-                            font-weight: 600;
-
-                            &:first-child {
-                                color: $secondary-color;
-                            }   
-                        }
-                    }
-
-                    .synopsis {
-                        line-height: 1.3;
-                    }
-                }
-
-                img {
-                    max-width: 200px;
-                    max-height: 300px;
-                    
-                }
-
-                &:hover {
-                    transform: scale(1.3);
-                    z-index: 99;
-                }
-
-                &:hover .description {
-                   
-                    display: flex;
-                    flex-direction: column;
-                    z-index: 99;
-
-                }
-
-
-            }
-         
-
-        }
-
-    }
-
 }

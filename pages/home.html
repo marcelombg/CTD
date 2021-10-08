@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/style.css">
-    <script defer src="../scripts/index.js"></script>
+    <script defer src="../scripts/home.js"></script>
 </head>
 
 <body>
@@ -126,9 +126,8 @@
     </section>
 
     <main class="carousel container">
-
-        <section id="trending">
-            <h2>Trending Now</h2>
+        <section id="trending items">
+            <h2 class="title-carousel">Trending Now</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -147,7 +146,7 @@
                         <div class="synopsis">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
                         </div>
-                    </div>
+                    </div>   
                 </li>
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
@@ -244,11 +243,11 @@
                         </div>
                     </div>
                 </li>      
+                
             </ul>
-
         </section>
         <section id="action">
-            <h2>Action</h2>
+            <h2 class="title-carousel">Action</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -363,12 +362,11 @@
                             Lorem ipsum dolor sit amet consectetur.
                         </div>
                     </div>
-                </li>      
+                </li>   
             </ul>
-
         </section>
         <section id="comedy">
-            <h2>Comedy</h2>
+            <h2 class="title-carousel">Comedy</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -488,7 +486,7 @@
 
         </section>
         <section id="drama">
-            <h2>Drama</h2>
+            <h2 class="title-carousel">Drama</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -608,7 +606,7 @@
 
         </section>
         <section id="horror">
-            <h2>Horror</h2>
+            <h2 class="title-carousel">Horror</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -728,7 +726,7 @@
 
         </section>
         <section id="mistery">
-            <h2>Mistery</h2>
+            <h2 class="title-carousel">Mistery</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -848,7 +846,7 @@
 
         </section>
         <section id="romance">
-            <h2>Romance</h2>
+            <h2 class="title-carousel">Romance</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -968,7 +966,7 @@
 
         </section>
         <section id="thriller">
-            <h2>Thriller</h2>
+            <h2 class="title-carousel">Thriller</h2>
             <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
@@ -1087,9 +1085,418 @@
             </ul>
 
         </section>
-
+        <section class="movies-modal hidden">
+            <header>
+                <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                <main class="modal-description">
+                    <div class="top">
+                        <div class="title">
+                            <h2>Shang-Chi e a Lenda dos Dez Anéis</h2>
+                            <i class="ri-close-line"></i>
+                        </div>
+                        <article class="synopsis">
+                            <p>Em Shang-Chi e a Lenda dos Dez Anéis, acompanhamos a história de Shang-Chi (Simu Liu), um jovem chinês que foi criado por seu pai em reclusão para que pudesse focar totalmente em ser um mestre de artes marciais. Entretanto, quando ele tem a chance de entrar em contato com o resto do mundo pela primeira vez, logo percebe que seu pai não é o humanitário que dizia ser, vendo-se obrigado a se rebelar e traçar o seu próprio caminho.
+                            </p>
+                        </article>
+                    </div>
+                    <footer class="rating">
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2021</p>
+                        </div>
+                        <div class="modal-actions">
+                            <a href="#" class="play">
+                                <i class="ri-play-fill"></i>
+                            </a>
+                            <a href="#" class="my-list">
+                                <i class="ri-add-line"></i>
+                            </a>
+                        </div>
+                    </footer>
+                </main>
+            </header>
+            <main class="trailers">
+                <h2 class="title">Trailer</h2>
+                <div class="content">
+                    <section class="item">
+                        <div class="item-video">
+                            <img src="../assets/home/modal/trailer.jpg" alt="">
+                        </div>
+                        <div class="item-description">
+                            <h2>Título</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla assumenda eum, quos ex laborum deserunt.</p>
+                        </div>
+                    </section>
+                    <section class="item">
+                        <div class="item-video">
+                            <img src="../assets/home/modal/trailer.jpg" alt="">
+                        </div>
+                        <div class="item-description">
+                            <h2>Título</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla assumenda eum, quos ex laborum deserunt.</p>
+                        </div>
+                    </section>
+                    <section class="item">
+                        <div class="item-video">
+                            <img src="../assets/home/modal/trailer.jpg" alt="">
+                        </div>
+                        <div class="item-description">
+                            <h2>Título</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla assumenda eum, quos ex laborum deserunt.</p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </section>
     </main>
 
+    <section class="search-items container hidden">
+            <h2 class="title-carousel">Resultados da Busca</h2>
+            <ul class="items-carousel">
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
+                    <div class="description">
+                        <div class="actions">
+                            <div class="left">
+                                <i class="ri-play-fill"></i>
+                                <i class="ri-add-line"></i>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <div class="status">
+                            <p>98% relevante</p>
+                            <p>2020</p>
+                        </div>
+                        <div class="synopsis">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    </section>
 </body>
 
 </html>

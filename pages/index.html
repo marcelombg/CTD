@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Flix | Iniital</title>
+    <title>Digital Flix</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/style.css">
-    <script defer src=""></script>
 </head>
 
 <body>
 
     <main class="index-cover">
 
-        <header class="index-header">
+        <header class="index-header container">
 
             <div class="index-container">
     
@@ -25,11 +25,9 @@
                 
                 <div class="index-settings">         
                     <span class="enter">ENTRAR</span>
-                    <div class="index-item-actions">
-                        <a href="#" class="try">
-                            <i class="">EXPERIMENTE GRÁTRIS</i>
-                        </a>
-                    </div>
+                    <a href="/pages/login.html" class="try">
+                        <i class="">EXPERIMENTE GRÁTRIS</i>
+                    </a>
                 </div>
     
             </div>
@@ -43,27 +41,23 @@
                 <img src="https://hbomax-images.warnermediacdn.com/2021-09/hero_promo_purpline.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="line">
                 <p class="index-description">Após esse período, assinaturas a partir de R$ 14,16/mês* 1no plano anual.</p>
                     <div class="index-item-actions">
-                        <a href="#" class="try">
+                        <a href="/pages/login.html" class="try">
                             <i class="">EXPERIMENTE GRÁTRIS</i>
                         </a>
                     </div>
                 <p class="index-description">O período de teste gratuito é apenas para novos assinantes. <br> Restrições se aplicam.</p>
             </div>
         </div>
+    
+    </main>
 
-        <section id="index-trending">
-            <h2>Alerta de spoiler: a Digital Flix tem novidades para você</h2>
-            <ul class="index-carousel">
+    <main class="carousel container">
+        <section id="trending items">
+            <h2 class="index-title-carousel">Alerta de spoiler: a HBO Max tem novidades para você</h2>
+            <ul class="items-carousel">
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ArrOBeio968bUuUOtEpKa1teIh4.jpg" alt="">
                     <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
                         <div class="status">
                             <p>98% relevante</p>
                             <p>2020</p>
@@ -71,18 +65,11 @@
                         <div class="synopsis">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe?
                         </div>
-                    </div>
+                    </div>   
                 </li>
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fpD2jkeaSZvPbgpcpqhv765R8PF.jpg" alt="">
                     <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
                         <div class="status">
                             <p>98% relevante</p>
                             <p>2020</p>
@@ -95,13 +82,6 @@
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/oGzaG5vqSJkIiJmxcJ8EKzfFad3.jpg" alt="">
                     <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
                         <div class="status">
                             <p>98% relevante</p>
                             <p>2020</p>
@@ -114,13 +94,6 @@
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/stYOdg6kFi9jl9aGLeh9vLSPiFU.jpg" alt="">
                     <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
                         <div class="status">
                             <p>98% relevante</p>
                             <p>2020</p>
@@ -133,13 +106,6 @@
                 <li>
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
                     <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
                         <div class="status">
                             <p>98% relevante</p>
                             <p>2020</p>
@@ -148,32 +114,10 @@
                             Lorem ipsum dolor sit amet consectetur.
                         </div>
                     </div>
-                </li>
-                <li>
-                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/alN7yKuE5eDWAqvwECfOaIR1kmK.jpg" alt="">
-                    <div class="description">
-                        <div class="actions">
-                            <div class="left">
-                                <i class="ri-play-fill"></i>
-                                <i class="ri-add-line"></i>
-                            </div>
-                            <i class="ri-arrow-down-s-line"></i>
-                        </div>
-                        <div class="status">
-                            <p>98% relevante</p>
-                            <p>2020</p>
-                        </div>
-                        <div class="synopsis">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </div>
-                    </div>
-                </li>      
+                </li>                
             </ul>
-
-    
         </section>
-    
-    </main>
+    </main>    
 
 </body>
 
