@@ -1,0 +1,5 @@
+Olá Ana, tudo bem? Espero que sim! :)
+
+Para rodar executar o projeto, acesse o arquivo curso.js e dê o comando: node .\curso.js
+
+Obrigado e uma boa noite/bom dia/boa tarde!

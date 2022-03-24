@@ -1,0 +1,19 @@
+{
+  "name": "aula-extra",
+  "version": "1.0.0",
+  "description": "Aula Extra Rodrigo",
+  "main": "aual-extra.js",
+  "scripts": {
+    "start": "nodemon aula-extra.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Garofalo",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
