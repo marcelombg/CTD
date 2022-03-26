@@ -15,7 +15,8 @@
     <h1>Inscrição para Hogwarts</h1>
     <label>
       Nome completo:
-      <input type="text" class="error" name="nome" id="nome" autocomplete="off" required maxlength="150">
+      <!-- // - Campo Nome é obrigatório // -->
+      <input type="text" class="error" name="nome" id="nome" autocomplete="off" required> 
     </label>
     <label>
       Senha:
@@ -26,7 +27,7 @@
       <input type="text" name="tel" id="tel">
     </label>
 
-    <fieldset>
+    <fieldset id="">
       <legend>Hobbies: (No máximo 4)</legend>
       <label>
         <input type="checkbox" name="hobbies" id="hobbiesNetflix">
@@ -86,48 +87,47 @@
       </label>
     </fieldset>
 
+    <!-- // - Campo País é obrigatório // -->
     <fieldset>
       <legend>Nacionalidade</legend>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeArgentina">
+        <input type="radio" name="nacionalidade" id="nacionalidadeArgentina" required>
         Argentina
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeColombiana">
+        <input type="radio" name="nacionalidade" id="nacionalidadeColombiana" required>
         Colombia
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeBrasileira">
+        <input type="radio" name="nacionalidade" id="nacionalidadeBrasileira" required>
         Brasil
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeChilena">
+        <input type="radio" name="nacionalidade" id="nacionalidadeChilena" required>
         Chile
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeVenezuelano">
+        <input type="radio" name="nacionalidade" id="nacionalidadeVenezuelano" required>
         Venezuela
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadePeru">
+        <input type="radio" name="nacionalidade" id="nacionalidadePeru" required>
         Perú
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeUruguai">
+        <input type="radio" name="nacionalidade" id="nacionalidadeUruguai" required>
         Uruguai
       </label>
       <label>
-        <input type="radio" name="nacionalidade" id="nacionalidadeParaguai">
+        <input type="radio" name="nacionalidade" id="nacionalidadeParaguai" required>
         Paraguai
       </label>
     </fieldset>
 
-    <button>Inscrever-me</button>
-    <!-- <button disabled>Inscrever-me</button> -->
+    <button onclick="check(nome)">Inscrever-me</button>
   </form>
-
-  <script src="script.js"></script>
-  
+<script src="main.js"></script>
 </body>
 
 </html>
+
