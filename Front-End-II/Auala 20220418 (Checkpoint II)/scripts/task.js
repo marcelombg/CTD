@@ -1,3 +1,4 @@
+
 // configuracao da API, encontrada na tarefa de criar Usuario.
 const tokenJson = localStorage.getItem("login")
 let valorToken = JSON.parse(tokenJson)
@@ -10,6 +11,7 @@ let clientValue = document.getElementById("novaTarefa");
 
 //skeleton style 
 let skeleton = document.querySelector('#skeleton')
+
 
 // selecionar o elemento onde vamos adicionar novas tarifas
 const tarefasPendentes = document.querySelector('.tarefas-pendentes')
@@ -48,7 +50,9 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", configuracaoRequisica
         fetch(urlGetTask, configTask)
         .then(res => res.json())
         .then(data =>{
+
             skeleton.style.display = 'none'
+
             data.map((info) => {
 
                 if (info.completed === true) {
@@ -186,7 +190,7 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", configuracaoRequisica
 
     // Get terminated element
     let terminatedBtn = document.querySelector('.tarefas-pendentes')
-      terminatedBtn.addEventListener('click', (e) => {
+      terminatedBtn.addEventListener('click', (e) => {       
           let item = e.target
           console.log(item)
           if(item.classList[0] === 'not-done'){
@@ -243,7 +247,7 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", configuracaoRequisica
                 divListThird.appendChild(btnEdit)
                 divListThird.appendChild(btnRemove)
                 btnEdit.appendChild(iEdit)
-                btnRemove.appendChild(iRemove) 
+                btnRemove.appendChild(iRemove)               
     })
 }
 
@@ -291,6 +295,7 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", configuracaoRequisica
     // deletar a tarefa selecionada
     let deleteBtn = document.querySelector('.tarefas-terminadas')
       deleteBtn.addEventListener('click', (e) => {
+          
           let item = e.target
          
           if(item.classList[0] === 'far'){

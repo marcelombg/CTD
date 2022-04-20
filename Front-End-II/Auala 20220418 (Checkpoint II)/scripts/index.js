@@ -3,14 +3,19 @@
 function entrar() {
     const email = document.querySelector("#inputEmail").value;
 
-    const emailNormalizado = email.toLowerCase();
+    // const emailNormalizado = email.toLowerCase();
+
+    let emailNormalizado = email.toLowerCase();
 
     const senha = document.querySelector("#inputPassword").value;
 
     console.log(emailNormalizado, senha)
 
-    // configuracao da API, encontrada na tarefa de criar Usuario.
+    mostrarSpinner();
 
+    if (senha.length >= 8 && senha.length < 15 && /.com$/.test(emailNormalizado)) {
+
+    // configuracao da API, encontrada na tarefa de criar Usuario.
     let configuracaoRequisicao = {
         method: 'POST',
         body: JSON.stringify({
@@ -28,7 +33,11 @@ function entrar() {
     fetch("https://ctd-todo-api.herokuapp.com/v1/users/login", configuracaoRequisicao)
 
         .then((response) => {
-            return response.json()
+            // if (response.status == 200){
+                return response.json()
+            // }
+            /* Se o código for diferente de sucesso (201), lança um throw para que a execução caia no Catch() */
+            // throw response;
         })
         .then(function (resposta) {
             localStorage.setItem("login", JSON.stringify({ token: resposta }))
@@ -41,9 +50,19 @@ function entrar() {
 
         })
         .catch(error => {
-            // cadastroErro(error)
             console.log(error)
         })
 
 
+
+    } else {
+        alert("Usuario ou senha incorreto")
+        window.location.href = "index.html"
+        ocultarSpinner();
+    }
+
 }
+
+
+
+

@@ -10,6 +10,7 @@ let botaoCriarConta = document.getElementById("botaoCriarContaCadastro");
 botaoCriarConta.addEventListener('click', evento => {
 
     evento.preventDefault();
+    mostrarSpinner();
 
     //Verifica se todos os campos estão preenchidos
 
@@ -60,9 +61,9 @@ botaoCriarConta.addEventListener('click', evento => {
 
         alert("Todos os campos devem ser preenchidos para que possa prosseguir")
         console.error()
+        window.location.href = "signup.html"
+        ocultarSpinner();
     }
-
-
 });
 
 /*  Ao obter o sucesso, recebe o json (token) do usuário*/

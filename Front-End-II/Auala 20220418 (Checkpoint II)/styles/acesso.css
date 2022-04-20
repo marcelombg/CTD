@@ -1,6 +1,6 @@
 @import url('./common.css');
 
-body{
+body {
   display: flex;
 }
 
@@ -68,24 +68,87 @@ button {
   color: grey;
   font-size: 2em;
 }
-.ingressar{
+
+.ingressar {
   text-align: center;
 }
-.left{
-  width: 50%;  
+
+.left {
+  width: 50%;
   background-color: white;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.left img{
-  width:60%;
+
+.left img {
+  width: 60%;
 }
-.right{
+
+.right {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+/* Oculta o formulário */
+.hidden {
+  display: none;
+}
+
+/* Estilos do Spinner */
+#conteiner-load {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+  background-color: whitesmoke;
+}
+
+#load {
+  border: 10px solid rgb(255, 255, 255);
+  outline: 1px solid lightgray;
+  border-top-color: var(--primary);
+  border-bottom-color: var(--secondary);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  -webkit-animation: girar 1.5s linear infinite;
+  animation: girar 1.5s linear infinite;
+}
+
+/* Animação do spinner */
+@-webkit-keyframes girar {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes girar {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
